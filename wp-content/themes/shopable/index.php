@@ -15,6 +15,14 @@
 get_header();
 ?>
 
+<div class="custom-header header-media">
+<img src="<?php header_image(); ?>" alt="">
+<div class="entry-header">
+<h2 class="entry-title"><?php the_title(); ?></h2>
+</div>
+
+</div>
+
 <main id="primary" class="site-main">
 	<div class="wrapper">
 		<div class="site-div">

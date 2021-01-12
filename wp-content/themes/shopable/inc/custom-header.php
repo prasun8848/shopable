@@ -22,7 +22,7 @@ function shopable_custom_header_setup() {
 		apply_filters(
 			'shopable_custom_header_args',
 			array(
-				'default-image'      => '',
+				'default-image'      => 'abt-banner.png',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,

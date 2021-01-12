@@ -15,6 +15,13 @@
 get_header();
 ?>
 
+<div class="custom-header header-media">
+<img src="<?php header_image(); ?>" alt="">
+<div class="entry-header">
+<h2 class="entry-title"><?php the_title(); ?></h2>
+</div>
+
+</div>
 	
 	<div class="wrapper">
 <main id="primary" class="site-main site-center">
@@ -33,6 +40,7 @@ get_header();
 		?>
 	</main><!-- #main -->
 </div>
+
 
 
 <?php

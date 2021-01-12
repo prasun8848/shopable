@@ -9,10 +9,18 @@
 
 get_header();
 ?>
+<div class="custom-header header-media">
+<img src="<?php header_image(); ?>" alt="">
+<div class="entry-header">
+<h2 class="entry-title"><?php the_title(); ?></h2>
+</div>
 
-	<main id="primary" class="site-main">
-<div class="wrapper">
-		<?php
+</div>
+<main id="primary" class="site-main">
+	<div class="wrapper">
+		<div class="site-div">
+			<div class="content-area">
+				<?php
 		while ( have_posts() ) :
 			the_post();
 
@@ -32,9 +40,14 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-</div>
-	</main><!-- #main -->
+			</div>
+			<aside class="widget-area sidebar">
+				<?php get_sidebar();?>
+			</aside>
+	</div>
+	</div>
+</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();

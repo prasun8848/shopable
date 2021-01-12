@@ -37,7 +37,11 @@
 
 	<div class="entry-content">
 		<?php
-		the_content(
+
+		if (is_single())
+		{
+			the_content(
+	
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
@@ -50,7 +54,12 @@
 				),
 				wp_kses_post( get_the_title() )
 			)
-		);
+			);
+
+				}else{
+					echo wp_trim_words(get_the_content(), 40, '...');
+
+				}
 
 		wp_link_pages(
 			array(
