@@ -19,6 +19,11 @@ get_header();
 <img src="<?php header_image(); ?>" alt="">
 <div class="entry-header">
 <h2 class="entry-title"><?php the_title(); ?></h2>
+  <?php
+if (function_exists('yoast_breadcrumb')) {
+    yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+}
+?>
 </div>
 
 </div>

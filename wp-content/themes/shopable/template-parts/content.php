@@ -10,9 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<div class="post-image">
-<?php shopable_post_thumbnail(); ?>
-</div>
+<?php 
+	if (!(is_single())){ ?>
+		<div class="post-image">
+			<?php shopable_post_thumbnail(); ?>
+		</div>
+<?php } ?>
+
 <div class="post-content">
 	<header class="entry-header">
 		<?php

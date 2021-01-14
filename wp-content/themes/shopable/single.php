@@ -10,9 +10,13 @@
 get_header();
 ?>
 <div class="custom-header header-media">
-<img src="<?php header_image(); ?>" alt="">
+
+<?php shopable_post_thumbnail(); ?>
+
 <div class="entry-header">
 <h2 class="entry-title"><?php the_title(); ?></h2>
+
+<?php echo do_shortcode( '[catch-breadcrumb]' );?>
 </div>
 
 </div>
