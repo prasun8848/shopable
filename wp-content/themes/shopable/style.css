@@ -1707,6 +1707,9 @@ p.logged-in-as a {
 	background-color: #343333;
 	min-height: 300px;
 }
+.custom-header h1{
+	color: #fff;
+}
 
 .header-media .entry-header {
 	position: absolute;
@@ -1743,6 +1746,9 @@ a:active {
 	color: #333;
 }
 
+footer#colophon .site-info a:hover{
+	color: rgb(250 114 104);
+}
 footer#colophon .site-info a {
 	color: #666;
 }
@@ -1758,6 +1764,7 @@ nav.entry-breadcrumbs a {
 
 nav.entry-breadcrumbs a:hover {
 	color: #fff;
+	text-decoration: underline;
 }
 
 .custom-header.header-media .post-thumbnail {
@@ -1771,7 +1778,8 @@ section.error-404.not-found.content-area {
 .content-area {
     margin-bottom: 40px;
 }
-.site-header .wrapper:after {
+.site-header .wrapper:after,
+.single .post .entry-title {
     display: none;
 }
 /** media query css ***/

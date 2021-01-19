@@ -18,12 +18,8 @@ get_header();
 <div class="custom-header header-media">
 <img src="<?php header_image(); ?>" alt="">
 <div class="entry-header">
-<h2 class="entry-title"><?php the_title(); ?></h2>
-  <?php
-if (function_exists('yoast_breadcrumb')) {
-    yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-}
-?>
+<h1 class="entry-title"><?php the_title(); ?></h1>
+<?php echo do_shortcode( '[catch-breadcrumb]' );?>
 </div>
 
 </div>

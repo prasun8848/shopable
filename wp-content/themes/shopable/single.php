@@ -14,7 +14,7 @@ get_header();
 <?php shopable_post_thumbnail(); ?>
 
 <div class="entry-header">
-<h2 class="entry-title"><?php the_title(); ?></h2>
+<h1 class="entry-title"><?php the_title(); ?></h1>
 
 <?php echo do_shortcode( '[catch-breadcrumb]' );?>
 </div>
