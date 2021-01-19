@@ -10,20 +10,20 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
+<main id="primary" class="site-main">
+	<div class="wrapper">
+		<div class="site-div">
+			<div class="content-area">
+				<?php if ( have_posts() ) : ?>
+				<header class="page-header">
+					<h1 class="page-title">
+						<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'shopable' ), '<span>' . get_search_query() . '</span>' );
 					?>
-				</h1>
-			</header><!-- .page-header -->
-
-			<?php
+					</h1>
+				</header><!-- .page-header -->
+				<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -46,8 +46,15 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+			</div>
+			<aside class="widget-area sidebar">
+				<?php
+get_sidebar();
+ ?>
+			</aside>
+		</div>
+	</div>
+</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
