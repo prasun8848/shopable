@@ -178,3 +178,39 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Cutom Comment file
+ */
+    function format_comment($comment, $args, $depth) {
+    
+       $GLOBALS['comment'] = $comment; ?>
+       
+        <li class="comment even thread-even depth-1" <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+            <article class="comment-body">
+                <div class="comment-author vcard">
+                    <img alt="" src="https://secure.gravatar.com/avatar/8a2ba89f1f5086bed763027ffbf97cbb?s=48&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/8a2ba89f1f5086bed763027ffbf97cbb?s=96&amp;d=mm&amp;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">
+                </div>
+                <div class="comment-container">
+                    <header class="comment-meta">
+                        <cite class="fn author-name"><?php printf(__('%s'), get_comment_author_link()) ?></cite>
+                        <span class="says screen-reader-text">says:</span>
+                    </header>
+                    <div class="comment-metadata">
+                        <a class="comment-permalink" href="<?php echo htmlspecialchars ( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s'), get_comment_date(), get_comment_time()) ?></a>
+                    </div>
+                    <div class="comment-content">
+                        <?php if ($comment->comment_approved == '0') : ?>
+                            <em><php _e('Your comment is awaiting moderation.') ?></em><br />
+                        <?php endif; ?>
+                    
+                        <?php comment_text(); ?>
+            
+                        <div class="reply">
+                            <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+        
+<?php }

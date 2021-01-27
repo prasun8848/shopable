@@ -19,7 +19,8 @@ get_header();
 <img src="<?php header_image(); ?>" alt="">
 <div class="entry-header">
 <h1 class="entry-title"><?php the_title(); ?></h1>
-<?php echo do_shortcode( '[catch-breadcrumb]' );?>
+<?php echo do_shortcode('[catch-breadcrumb]'); ?>
+
 </div>
 
 </div>
